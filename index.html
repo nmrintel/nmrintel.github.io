@@ -6,6 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Homepage</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav ul {
+            background: #444;
+            overflow: hidden;
+            color: #fff;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            color: #fff;
+            padding: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #eee;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,59 +95,43 @@
     <section id="about">
         <h2>About Me</h2>
         <a href="https://github.com/nmrintel">GitHub(@nmrintel)</a>
-        <p>京都大学工学部情報学科数理工学コース所属</p>
+        <p>京都大学工学部情報学科数理工学コース所属2回生</p>
     </section>
-    <section id="projects">
-        <h2>Projects</h2>
+    <section id="certification">
+        <h2>資格</h2>
         <ul>
-            <div style="margin: 30px;">
-                <a href="https://verceltest-omega-coral.vercel.app/">SNS</a>
-                <p style="margin-right: 10px;">実装言語:Next.js/Firebase</p>
-                <p>エンジニアのポートフォリオの投稿を想定してたSNSを作成しました.</p>
-            </div>
-
-            <div style="margin: 30px;">
-                <a href="https://github.com/nmrintel/myProgram">機械学習コンペ</a>
-                <p style="margin-right: 10px;">実装言語:Python(sklearn,tensorflow)</p>
-                <p>機械学習のコンペティションに参加した際のプログラム</p>
-            </div>
-
-            <div style="margin: 30px;">
-                <a href="https://github.com/2022-4J-group-O">CTF体験ゲーム</a>
-                <p style="margin-right: 10px;">実装言語:Python(Ren'Py)</p>
-                <p>内容:セキュリティのコンテストであるCTFの体験ゲームを作成しました。
-                    プレイヤーがシステム内のファイルをwindowsのエクスプローラーから直接的に操作します</p>
-            </div>
-           
-            <div style="margin: 30px;">
-                <a href="https://github.com/nmrintel/Quantum">量子機械学習</a>
-                <p style="margin-right: 10px;">実装言語:Python(Qulacs)</li>
-                <p>量子コンピュータにおける機械学習の数値シミュレーション</p>
-            </div>
-
-            <div style="margin: 30px;">
-                <a href="https://github.com/Ennichi">縁日ゲーム</a>
-                <p style="margin-right: 10px;">実装言語:C++(DXライブラリ使用)</p>
-                <p>内容:文化祭で縁日をモチーフにしたゲームを作成しました。</p>
-            </div>
-            
+            <li>応用情報技術者</li>
+            <li>TOEIC:910/TOEFL ibt 91</li>
         </ul>
     </section>
+
     <section id="experience">
-        <h2>Experience</h2>
+        <h2>経験</h2>
+        <h3>実務経験</h3>
+        <ul>
+            <li>株式会社DeMiA:2024年5月~2024年12月</li>
+        </ul>
+        Pythonを用いて、huggingfaceを用いてたLLMのfine tuningや自然言語処理のプログラムの作成を担当していました。
+        <a
+            href="https://www.jstage.jst.go.jp/article/pjsai/JSAI2024/0/JSAI2024_3Xin230/_article/-char/ja">従事していたプロジェクトの論文</a>
+        <h3>プログラミング言語</h3>
         <ul>
             <li>C/C++:5年</li>
             <li>Python:2年</li>
             <li>H8マイコンアセンブリ:1年</li>
             <li>JavaScript,React,Firebase,Linuxの基本,SQL:1年未満</li>
         </ul>
-        <h2>その他の経験</h2>
         <p>AI/アルゴリズム/コンピュータの内部の論理回路・電子回路・通信理論についてもある程度の知識があります.</p>
-        <p>TOEIC:910/TOEFL ibt 91</p>
+    </section>
 
-        <footer>
-            <p>&copy; 2024 nmrintel. All rights reserved.</p>
-        </footer>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div style="margin: 30px;">
+            <a href="https://github.com/Ennichi">縁日ゲーム</a>
+            <p style="margin-right: 10px;">実装言語:C++(DX libray使用)</p>
+            <p>内容:文化祭で縁日をモチーフにしたゲームを作成しました。</p>
+        </div>
+    </section>
 </body>
 
 </html>
