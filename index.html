@@ -5,53 +5,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Homepage</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-bg: #f5f7fa;
+            --dark-text: #333;
+            --light-text: #fff;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.8;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
         }
 
         header {
-            background: #333;
-            color: #fff;
-            padding: 1em 0;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: var(--light-text);
+            padding: 2em 0;
             text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            background: var(--light-text);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav ul {
-            background: #444;
-            overflow: hidden;
-            color: #fff;
+            display: flex;
+            justify-content: center;
             padding: 0;
-            text-align: center;
             margin: 0;
+            list-style-type: none;
         }
 
         nav ul li {
-            display: inline;
-            color: 444;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
         }
 
         nav ul li a {
-            color: #444;
+            display: block;
+            color: var(--primary-color);
             text-decoration: none;
+            padding: 1em 1.5em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         section {
-            padding: 20px;
-            margin: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin: 30px auto;
+            background: var(--light-text);
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
         }
 
+
         h2 {
-            color: #333;
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin-top: 25px;
         }
 
         ul {
@@ -60,78 +105,154 @@
         }
 
         ul li {
-            background: #eee;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 4px;
+            background: var(--light-bg);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+
+
+        .project-card {
+            background: var(--light-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--accent-color);
+        }
+
+
+        .project-card h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
         }
 
         p {
             color: #555;
+            line-height: 1.8;
         }
 
         a {
-            color: #007BFF;
+            color: var(--secondary-color);
             text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
         a:hover {
+            color: var(--accent-color);
             text-decoration: underline;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .social-link i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #e0f0ff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--primary-color);
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Welcome to nmrintel Homepage</h1>
+        <h1>Welcome to nmrintel's Portfolio</h1>
     </header>
     <nav>
         <ul>
             <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certification">Certifications</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
         </ul>
     </nav>
-    <section id="about">
-        <h2>About Me</h2>
-        <a href="https://github.com/nmrintel">GitHub(@nmrintel)</a>
-        <p>京都大学工学部情報学科数理工学コース所属2回生</p>
-    </section>
-    <section id="certification">
-        <h2>資格</h2>
-        <ul>
-            <li>応用情報技術者</li>
-            <li>TOEIC:910/TOEFL ibt 91</li>
-        </ul>
-    </section>
 
-    <section id="experience">
-        <h2>経験</h2>
-        <h3>実務経験</h3>
-        <ul>
-            <li>株式会社DeMiA:2024年5月~2024年12月</li>
-        </ul>
-        Pythonを用いて、huggingfaceを用いてたLLMのfine tuningや自然言語処理のプログラムの作成を担当していました。
-        <a
-            href="https://www.jstage.jst.go.jp/article/pjsai/JSAI2024/0/JSAI2024_3Xin230/_article/-char/ja">従事していたプロジェクトの論文</a>
-        <h3>プログラミング言語</h3>
-        <ul>
-            <li>C/C++:5年</li>
-            <li>Python:2年</li>
-            <li>H8マイコンアセンブリ:1年</li>
-            <li>JavaScript,React,Firebase,Linuxの基本,SQL:1年未満</li>
-        </ul>
-        <p>AI/アルゴリズム/コンピュータの内部の論理回路・電子回路・通信理論についてもある程度の知識があります.</p>
-    </section>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <a href="https://github.com/nmrintel" class="social-link">
+                <i class="fab fa-github"></i>GitHub(@nmrintel)
+            </a>
+            <p>京都大学工学部情報学科数理工学コース所属 27卒</p>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div style="margin: 30px;">
-            <a href="https://github.com/Ennichi">縁日ゲーム</a>
-            <p style="margin-right: 10px;">実装言語:C++(DX libray使用)</p>
-            <p>内容:文化祭で縁日をモチーフにしたゲームを作成しました。</p>
-        </div>
-    </section>
+        <section id="certification">
+            <h2>資格</h2>
+            <ul>
+                <li><i class="fas fa-certificate"></i> 応用情報技術者</li>
+                <li><i class="fas fa-language"></i> TOEIC: 910 / TOEFL iBT: 91</li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>経験</h2>
+            <h3>実務経験</h3>
+            <ul>
+                <li>
+                    <strong>株式会社 DeMiA</strong> (2024年5月〜2024年12月)
+                    <p>huggingfaceを用いたLLMのfine tuning, torchでの分類モデル</p>
+                    <a href="https://www.jstage.jst.go.jp/article/pjsai/JSAI2024/0/JSAI2024_3Xin230/_article/-char/ja">
+                        <i class="fas fa-file-alt"></i> プロジェクト研究論文
+                    </a>
+                </li>
+                <li>
+                    <strong>株式会社 Suzuca technology</strong> (2024年3月〜)
+                    <p>自動運転モデルの開発</p>
+                </li>
+            </ul>
+
+            <h3>プログラミング言語</h3>
+            <div class="skills-list">
+                <span class="skill-tag">C/C++: 1年</span>
+                <span class="skill-tag">Python: 1年</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Firebase</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Golang</span>
+            </div>
+            <p>AI/アルゴリズム/コンピュータの内部の論理回路・電子回路・通信理論についてもある程度の知識があります。</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3><i class="fas fa-gamepad"></i> 縁日ゲーム</h3>
+                <p><strong>実装言語:</strong> C++ (DX libray使用)</p>
+                <p><strong>内容:</strong> 文化祭で縁日をモチーフにしたゲームを作成しました。</p>
+                <a href="https://github.com/Ennichi" class="social-link"><i class="fab fa-github"></i> GitHub
+                    Repository</a>
+            </div>
+
+            <div class="project-card">
+                <h3><i class="fas fa-share-alt"></i> 簡易SNS</h3>
+                <p><strong>技術スタック:</strong> Next.js, Firebase (vercelでホスティング)</p>
+                <p><strong>内容:</strong> Webの勉強を始めたさいにアウトプットとして作成しました。</p>
+                <a href="https://github.com/nmrintel/next2" class="social-link"><i class="fab fa-github"></i> GitHub
+                    Repository</a>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>
+</div>
